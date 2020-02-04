@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const StyledLink = styled(Link)`
   font-family: inherit;
@@ -12,13 +12,16 @@ const StyledLink = styled(Link)`
   font-size: 1.5rem;
 `
 
-const NavItem = ({ link }) => {
+const NavItem = ({ link, clicked }) => {
   return (
     <StyledLink
+      onClick={clicked}
       href={`#${link
         .split(" ")
         .join("-")
         .toLowerCase()}`}
+      spy={true}
+      smooth={true}
     >
       {link}
     </StyledLink>
