@@ -108,9 +108,14 @@ const StyledButton = styled.button`
     }
   }
 `
-const HamburgerToggler = () => {
+const HamburgerToggler = ({ menuOpened, toggleChange }) => {
   return (
-    <StyledButton className="" type="button">
+    <StyledButton
+      className=""
+      type="button"
+      checked={menuOpened}
+      onChange={toggleChange}
+    >
       <span className="hamburger-box">
         <span className="hamburger-inner"></span>
       </span>

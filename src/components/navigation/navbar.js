@@ -4,10 +4,8 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 // import { animated, useSpring, config }
 
-// TODO: DELETE HamburgerToggler This is just a styling test
-import HamburgerToggler from "../navigation/mobileMenu/hamburgerToggle"
-
 import DesktopMenu from "./desktopMenu"
+import MobileMenu from "./mobileMenu/mobileMenu"
 import LogoNavbar from "../UI/logoNavbar"
 
 const StyledHeader = styled.header`
@@ -56,7 +54,7 @@ const Navbar = () => {
         <StyledLink to="header">
           <LogoNavbar />
         </StyledLink>
-        {Mobile ? <HamburgerToggler /> : <DesktopMenu />}
+        {Mobile ? <MobileMenu /> : <DesktopMenu />}
       </Wrapper>
     </StyledHeader>
   )
