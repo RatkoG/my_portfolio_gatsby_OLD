@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <StyledHeader>
       <Wrapper Mobile={Mobile}>
-        <StyledLink to="header">
+        <StyledLink to="header" smooth={true} offset={-60}>
           <LogoNavbar />
         </StyledLink>
         {Mobile ? <MobileMenu /> : <DesktopMenu />}
