@@ -41,21 +41,22 @@ const Navbar = () => {
 
   const changeMobile = () => {
     window.matchMedia("(max-width: 37.5em)").matches
-      ? setMobile(console.log("💩💩💩💩💩💩💩💩💩💩💩💩💩"))
-      : setMobile(console.log("👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼"))
+      ? setMobile(true)
+      : setMobile(false)
   }
   useEffect(() => {
     changeMobile()
-  })
+    window.addEventListener("resize", changeMobile)
+    return () => window.removeEventListener("resize", changeMobile)
+  }, [])
 
   return (
     <StyledHeader>
-      <Wrapper>
+      <Wrapper Mobile={Mobile}>
         <StyledLink to="header">
           <LogoNavbar />
         </StyledLink>
-        <DesktopMenu />
-        <HamburgerToggler />
+        {Mobile ? <HamburgerToggler /> : <DesktopMenu />}
       </Wrapper>
     </StyledHeader>
   )
