@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 export default createGlobalStyle`
 
+
 html {
       font-size: 62.5%; //1rem = 10px
       box-sizing: border-box;
@@ -29,9 +30,5 @@ html {
 		width: 100%;
     height: 100%;
 		overflow: visible;
-
-		--primary: ${props => props.theme.colors.main};
-		--shadow-color: rgba(0, 0, 0, 0.1);
-		--navbar: rgba(255, 255, 255, 0.95);
 	}
 `
