@@ -16,8 +16,8 @@ const StyledHeader = styled.header`
   left: 0;
   z-index: 20;
   padding: 0 2%;
-  background: ${props => props.theme.colors.navbar};
-  box-shadow: ${props => props.theme.colors.shadow};
+  background: var(--navbar);
+  box-shadow: 0 0.5rem 2rem var(--shadow-color);
   transition: background 0.2s ease-out;
 `
 
