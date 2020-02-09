@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
-export default createGlobalStyle`
+import logo from "../images/backgroundPhoto.png"
 
+export default createGlobalStyle`
 
 html {
       font-size: 62.5%; //1rem = 10px
@@ -30,5 +31,7 @@ html {
 		width: 100%;
     height: 100%;
 		overflow: visible;
+    background-color:${props => props.theme.colors.main};
+    background-image: url(${logo})
 	}
 `

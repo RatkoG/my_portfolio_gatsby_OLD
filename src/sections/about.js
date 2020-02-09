@@ -1,20 +1,22 @@
 import React from "react"
-// import styled from "styled-components"
+import styled from "styled-components"
 import {
-  Contained,
-  StyledSection,
+  ContainedSkew,
+  StyledSectionSkew,
   Wrapper,
 } from "../components/layout/elements"
 
+const StyledAbout = styled(StyledSectionSkew)`
+  background: white;
+`
+
 const About = () => {
   return (
-    <StyledSection fullHeight id="about-me">
-      <Contained>
-        <Wrapper>
-          <h1>About Here</h1>
-        </Wrapper>
-      </Contained>
-    </StyledSection>
+    <StyledAbout id="about-me">
+      <ContainedSkew>
+        <Wrapper></Wrapper>
+      </ContainedSkew>
+    </StyledAbout>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+// import logo from "../images/backgroundPhoto.png"
 
 import {
   StyledSection,
@@ -50,6 +51,7 @@ const SubTitle = styled.h2`
 const Home = () => {
   return (
     <StyledSection fullHeight id="header">
+      {/* <img src={logo} /> */}
       <Contained>
         <Wrapper>
           <SmallWrapper>
