@@ -3,6 +3,7 @@ const theme = {
     main: "#2980b9",
     navbar: "rgba(255, 255, 255, 0.95)",
     shadow: "rgba(0, 0, 0, 0.16) 0 0.5rem 2rem ",
+    text: "#575757",
   },
   mediaQueries: {
     smallest: `only screen and (max-width: 25em)`,

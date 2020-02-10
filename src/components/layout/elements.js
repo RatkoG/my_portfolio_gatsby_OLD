@@ -6,6 +6,7 @@ export const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
+  /* TODO: Fix this here */
   min-height: 100vh;
 `
 export const Contained = styled.div`
@@ -23,7 +24,7 @@ export const StyledSectionSkew = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   transform: skewY(-7deg);
 `
 export const ContainedSkew = styled.div`

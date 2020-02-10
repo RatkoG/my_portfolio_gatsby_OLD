@@ -15,6 +15,27 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      // options: {
+      //   plugins: [
+      //     {
+      //       resolve: "gatsby-remark-external-links",
+      //       options: {
+      //         target: "_blank",
+      //         rel: "noreferrer",
+      //       },
+      //     },
+      //   ],
+      // },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
