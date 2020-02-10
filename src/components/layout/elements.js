@@ -17,6 +17,10 @@ export const Contained = styled.div`
 `
 export const Wrapper = styled.div`
   padding: 4rem 2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
 `
 export const StyledSectionSkew = styled.section`
   display: flex;

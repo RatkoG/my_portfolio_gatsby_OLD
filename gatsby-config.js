@@ -3,6 +3,13 @@ module.exports = {
     title: `Ratko | Front-end Developer`,
     description: `I'm a self-taught Front-end developer`,
     author: `Ratko Gjurichanin`,
+    social: {
+      twitter: "",
+      instagram: "",
+      linkedin: "",
+      github: "",
+      email: "ratko.gjurichanin@gmail.com",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
