@@ -8,6 +8,7 @@ import {
 } from "../components/layout/elements"
 
 import Heading from "../components/UI/heading"
+import Svg from "../components/UI/svgComp"
 
 const StyledAbout = styled(StyledSectionSkew)`
   background: white;
@@ -81,6 +82,7 @@ const About = () => {
               ></path>
             </svg>
           </StyledSvg>
+          <Svg />
         </Wrapper>
       </ContainedSkew>
     </StyledAbout>
