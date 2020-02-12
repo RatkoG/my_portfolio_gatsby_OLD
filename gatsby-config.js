@@ -4,16 +4,18 @@ module.exports = {
     description: `I'm a self-taught Front-end developer`,
     author: `Ratko Gjurichanin`,
     social: {
-      twitter: "",
-      instagram: "",
-      linkedin: "",
-      github: "",
+      twitter: "https://twitter.com/ratko_gj",
+      instagram: "https://www.instagram.com/ratko_gj/",
+      linkedin: "https://www.linkedin.com/in/ratko-gjurichanin/",
+      github: "https://github.com/RatkoG",
+      codepen: "",
       email: "ratko.gjurichanin@gmail.com",
     },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -8,6 +8,7 @@ import {
 } from "../components/layout/elements"
 import Heading from "../components/UI/heading"
 import ButtonLink from "../components/UI/buttonLink"
+import Social from "../components/UI/social"
 // TODO:Remove or fix it or rename it
 const WhiteSection = styled(StyledSection)`
   background: white;
@@ -44,6 +45,7 @@ const Contact = () => {
           <ButtonLink href={`mailto:${site.siteMetadata.social.email}`}>
             Send me a message
           </ButtonLink>
+          <Social />
           <CopyRight>
             Copyright &copy; {new Date().getFullYear}, Ratko Gjurichanin
           </CopyRight>

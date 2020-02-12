@@ -3,9 +3,9 @@ import styled from "styled-components"
 
 const StyledButton = styled.a`
   outline: none;
-  background: red;
+  background: ${props => props.theme.colors.main};
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 7rem;
   text-transform: uppercase;
   text-decoration: none;
   font-family: inherit;
