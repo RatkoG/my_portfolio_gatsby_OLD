@@ -16,7 +16,6 @@ const StyledWrapper = styled.div`
 `
 const StyledSvg = styled.a`
   border: 0.2rem solid ${props => props.theme.colors.main};
-  fill: ${props => props.theme.colors.main};
   border-radius: 50%;
   margin: 0 1.5rem;
   width: 7rem;
@@ -25,11 +24,10 @@ const StyledSvg = styled.a`
   justify-content: center;
   align-items: center;
   transition: 0.4s ease-out;
-  & > svg {
+  & svg {
     width: 2.5rem;
   }
-  &:hover {
-    fill: white;
+  &:hover svg {
     background: ${props => props.theme.colors.main};
     transform: scale(1.2);
   }

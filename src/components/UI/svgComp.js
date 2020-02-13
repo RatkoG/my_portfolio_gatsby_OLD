@@ -1,12 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 
 // TODO: TESTING SVG
-import JavaScript from "../../images/svg/javascript.svg"
-
+import JsSvg from "../../images/svg/javascript.svg"
+import Webpack from "../../images/svg/webpack.svg"
+import Sass from "../../images/svg/sass.svg"
+import GatsbySvg from "../../images/svg/gatsby.svg"
+import Test from "../../images/svg/reacttttt.svg"
+import GraphSvg from "../../images/svg/graphql.svg"
+import SketchSvg from "../../images/svg/sketch.svg"
+import ReduxSvg from "../../images/svg/redux.svg"
+import CssSvg from "../../images/svg/css.svg"
+import GitSvg from "../../images/svg/github.svg"
+import HtmlSvg from "../../images/svg/html5.svg"
+import Css3Svg from "../../images/svg/css3.svg"
 const StyledDiv = styled.div`
-  background: red;
+  /* background: red; */
   width: 100%;
   padding: 2rem;
 `
@@ -20,55 +29,60 @@ const StyledRowTwo = styled.div`
   justify-content: space-around;
 `
 const StyledBox = styled.div`
-  background: green;
+  /* background: green; */
+  text-align: center;
   width: 80px;
   &:hover {
     transform: scale(1.1);
   }
+  & svg {
+    width: 7rem;
+    height: 7rem;
+  }
 `
 
 const Svg = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { extension: { eq: "svg" } }) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              id
-              original {
-                src
-              }
-              fixed(height: 100, quality: 80) {
-                width
-              }
-            }
-            extension
-            publicURL
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
-
   return (
     <StyledDiv>
       <StyledRowOne>
-        {data.allFile.edges.map(edge => {
-          return <StyledBox>{edge.node.publicURL}</StyledBox>
-        })}
+        <StyledBox>
+          <Webpack />
+        </StyledBox>
+        <StyledBox>
+          <Sass />
+        </StyledBox>
+        <StyledBox>
+          <Test />
+        </StyledBox>
+        <StyledBox>
+          <GatsbySvg />
+        </StyledBox>
+        <StyledBox>
+          <JsSvg />
+        </StyledBox>
+        <StyledBox>
+          <GraphSvg />
+        </StyledBox>
       </StyledRowOne>
       <StyledRowTwo>
-        <StyledBox></StyledBox>
         <StyledBox>
-          <JavaScript />
+          <SketchSvg />
         </StyledBox>
-        <StyledBox />
-        <StyledBox />
-        <StyledBox />
-        <StyledBox />
+        <StyledBox>
+          <ReduxSvg />
+        </StyledBox>
+        <StyledBox>
+          <CssSvg />
+        </StyledBox>
+        <StyledBox>
+          <GitSvg />
+        </StyledBox>
+        <StyledBox>
+          <HtmlSvg />
+        </StyledBox>
+        <StyledBox>
+          <Css3Svg />
+        </StyledBox>
       </StyledRowTwo>
     </StyledDiv>
   )
