@@ -18,6 +18,7 @@ const StyledDiv = styled.div`
   /* background: red; */
   width: 100%;
   padding: 2rem;
+  margin-bottom: 4rem;
 `
 const StyledRowOne = styled.div`
   display: flex;
@@ -32,12 +33,13 @@ const StyledBox = styled.div`
   /* background: green; */
   text-align: center;
   width: 80px;
+  height: 80px;
   &:hover {
     transform: scale(1.1);
   }
   & svg {
-    width: 7rem;
-    height: 7rem;
+    width: 100%;
+    height: 100%;
   }
 `
 

@@ -45,7 +45,11 @@ const About = () => {
     <StyledAbout id="about-me">
       <ContainedSkew>
         <Wrapper>
-          <Heading title="About me" subtitle="A little more about my self" />
+          <Heading
+            title="About me"
+            subtitle="A little more about my self"
+            main
+          />
           <StyledText>
             {aboutMe.childMarkdownRemark.html}{" "}
             <StyledStack>

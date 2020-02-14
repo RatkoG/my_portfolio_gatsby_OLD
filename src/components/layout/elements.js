@@ -7,7 +7,12 @@ export const StyledSection = styled.section`
   justify-content: center;
   width: 100%;
   /* TODO: Fix this here */
-  min-height: 100vh;
+  min-height: ${({ fullHeight }) =>
+    fullHeight
+      ? "100vh"
+      : "auto"}; /* Fallback for browsers that do not support Custom Properties */
+  min-height: ${({ fullHeight }) =>
+    fullHeight ? "calc(var(--vh, 1vh) * 100)" : "auto"};
 `
 export const Contained = styled.div`
   max-width: 124rem;

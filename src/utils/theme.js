@@ -4,6 +4,10 @@ const theme = {
     navbar: "rgba(255, 255, 255, 0.95)",
     shadow: "rgba(0, 0, 0, 0.16) 0 0.5rem 2rem ",
     text: "#575757",
+    heading: {
+      white: "#fff",
+      colored: "#2980b9",
+    },
   },
   mediaQueries: {
     smallest: `only screen and (max-width: 25em)`,

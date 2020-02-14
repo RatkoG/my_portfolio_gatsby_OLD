@@ -1,5 +1,6 @@
 import React from "react"
 // import styled from "styled-components"
+import Heading from "../components/UI/heading"
 
 import {
   Contained,
@@ -9,10 +10,13 @@ import {
 
 const Portfolio = () => {
   return (
-    <StyledSection fullHeight id="portfolio">
+    <StyledSection id="portfolio">
       <Contained>
         <Wrapper>
-          <h1>Portfolio Here</h1>
+          <Heading
+            title="Portfolio"
+            subtitle="Sneak peak what I've been doing lately"
+          />
         </Wrapper>
       </Contained>
     </StyledSection>

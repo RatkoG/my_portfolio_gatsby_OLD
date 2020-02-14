@@ -35,7 +35,7 @@ const Contact = () => {
     }
   `)
   return (
-    <WhiteSection fullHeight id="contact">
+    <WhiteSection id="contact">
       <Contained>
         <Wrapper>
           <Heading
