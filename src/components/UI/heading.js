@@ -15,10 +15,7 @@ const Title = styled.h1`
   line-height: 1.15;
   /* color: ${props => props.theme.colors.main}; */
   /* color: ${props => props.FontColor}; */
-  color: ${({ test }) =>
-    test
-      ? props => props.theme.colors.main
-      : props => props.theme.colors.heading.white}
+  color:${props => (props.primary ? props.theme.colors.main : "white")}
 
 `
 const SubTitle = styled.h2`
@@ -28,10 +25,10 @@ const SubTitle = styled.h2`
   font-weight: 400;
 `
 
-const Heading = ({ title, subtitle, color }) => {
+const Heading = ({ title, subtitle, primary }) => {
   return (
     <HeadingWrapper>
-      <Title test={true}>{title}</Title>
+      <Title primary={primary}>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
     </HeadingWrapper>
   )

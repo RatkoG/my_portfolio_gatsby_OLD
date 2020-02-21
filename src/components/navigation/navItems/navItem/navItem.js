@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 const StyledLink = styled(Link)`
   font-family: inherit;
   font-weight: 700;
-  color: red;
+  color: ${props => props.theme.colors.main};
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -29,6 +29,7 @@ const NavItem = ({ link, clicked }) => {
         .toLowerCase()}`}
       spy={true}
       smooth={true}
+      offset={-50}
     >
       {link}
     </StyledLink>

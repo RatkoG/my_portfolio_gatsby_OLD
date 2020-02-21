@@ -41,6 +41,7 @@ const Contact = () => {
           <Heading
             title="Contact me"
             subtitle="Have a question or want to work together ?"
+            primary
           />
           <ButtonLink href={`mailto:${site.siteMetadata.social.email}`}>
             Send me a message

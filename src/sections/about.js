@@ -48,7 +48,7 @@ const About = () => {
           <Heading
             title="About me"
             subtitle="A little more about my self"
-            main
+            primary
           />
           <StyledText>
             {aboutMe.childMarkdownRemark.html}{" "}

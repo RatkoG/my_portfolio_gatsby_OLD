@@ -26,11 +26,18 @@ const StyledSvg = styled.a`
   transition: 0.4s ease-out;
   & svg {
     width: 2.5rem;
+    fill:  ${props => props.theme.colors.main};
   }
-  &:hover svg {
+  &:hover {
+    background: ${props => props.theme.colors.main};
+    svg{
+      fill:white;
+    }
+  }
+  /* &:hover svg {
     background: ${props => props.theme.colors.main};
     transform: scale(1.2);
-  }
+  } */
 `
 
 const Social = () => {
