@@ -1,7 +1,8 @@
-import React from "react"
+import React, { createContext } from "react"
 import styled from "styled-components"
 import ButtonLink from "../components/UI/buttonLink"
 import Img from "gatsby-image"
+import { createElement } from "react"
 const Wrapper = styled.div`
   background: white;
   width: 45%;
@@ -44,10 +45,23 @@ const ButtonStyle = styled(ButtonLink)`
 
 const PortfolioCard = ({ portfolio }) => {
   const { title, live, source, stack, image } = portfolio.frontmatter
+  // FIXME: THIS THING RENDER ALL STACKS ON ONE CARD
+  const stackArr = stack.split(" ")
+  function eachStack(stack) {
+    const div = document.querySelector(".stacks")
+    const span = `<span>${stack}</span>`
+
+    // const myFragment = document.createRange().createContextualFragment(span)
+    // div.appendChild(myFragment)
+    // console.log(span)
+  }
+
+  stackArr.forEach(eachStack)
+
   return (
     <Wrapper>
       <Image fluid={image.childImageSharp.fluid} />
-      <Stack>
+      <Stack className="stacks">
         <span>{stack}</span>
       </Stack>
       <Title>{title}</Title>

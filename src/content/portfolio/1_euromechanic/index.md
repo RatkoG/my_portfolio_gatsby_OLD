@@ -1,8 +1,8 @@
 ---
-title: 'Euro Mechanic'
-live: 'https://www.euromechanic-detailer.com/'
-source: 'https://github.com/RatkoG/euromechanic-detailer'
-image: 'euromechanic-detailer.png'
+title: "Euro Mechanic"
+live: "https://www.euromechanic-detailer.com/"
+source: "https://github.com/RatkoG/euromechanic-detailer"
+image: "euromechanic-detailer.png"
 stack: "React Styled-Components Gatsby"
 ---
 
