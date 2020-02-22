@@ -49,7 +49,7 @@ const StyledButton = styled.button`
       transition-duration: 0.15s;
       transition-property: transform;
       border-radius: 5px;
-      background-color: black;
+      background-color: ${props => props.theme.colors.main};
     }
 
     &::before,
@@ -108,13 +108,16 @@ const StyledButton = styled.button`
     }
   }
 `
-const HamburgerToggler = ({ menuOpened, toggleChange }) => {
+const HamburgerToggler = ({ toggleChange, menuOpened }) => {
+  const isActive = "is-active"
   return (
     <StyledButton
-      className=""
+      // className={menuOpened ? "is-active" : null}
       type="button"
-      checked={menuOpened}
-      onChange={toggleChange}
+      // className={menuOpened ? "is-active" : ""}
+      // className={menuOpened => (menuOpened ? "is-active" : "")}
+      className={menuOpened ? isActive : ""}
+      onClick={toggleChange}
     >
       <span className="hamburger-box">
         <span className="hamburger-inner"></span>

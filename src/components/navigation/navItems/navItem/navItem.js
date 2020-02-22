@@ -14,9 +14,6 @@ const StyledLink = styled(Link)`
   &:hover {
     color: green;
   }
-  &.active {
-    color: yellow;
-  }
 `
 
 const NavItem = ({ link, clicked }) => {
@@ -27,7 +24,6 @@ const NavItem = ({ link, clicked }) => {
         .split(" ")
         .join("-")
         .toLowerCase()}`}
-      spy={true}
       smooth={true}
       offset={-50}
     >

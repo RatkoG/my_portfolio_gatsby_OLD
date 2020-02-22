@@ -3,15 +3,15 @@ import styled from "styled-components"
 
 import HamburgerToggler from "./hamburgerToggle"
 import NavItems from "../navItems/navItems"
+import SideDrawer from "./sideDrawer"
 
 const BackgroundWrapper = styled.div`
-  background-color: red;
   position: fixed;
   /* background-color: var(--background); */
   z-index: -1;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 80%;
   height: 100%;
   display: flex;
 `
@@ -25,12 +25,18 @@ const Wrapper = styled.div`
   margin-top: 6rem;
   padding: 2rem 1rem;
 `
+// if (props.show) {
+//   drawerClasses = 'side-drawer open';
+// }
 const MobileMenu = () => {
   const [menuOpened, setMenuOpened] = useState(false)
   return (
     <>
       <HamburgerToggler
+        //Neznam zosto e ova ovde
         menuOpened={menuOpened}
+        // onClick={classList.toggle("is-active")}
+        // className={menuOpened ? "is-active" : ""}
         toggleChange={() => setMenuOpened(!menuOpened)}
       />
 

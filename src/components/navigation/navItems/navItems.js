@@ -4,13 +4,20 @@ import NavItem from "./navItem/navItem"
 
 const LINKS = ["About me", "Portfolio", "Contact"]
 
-const StyledNav = styled.nav``
+const StyledNav = styled.nav`
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+  flex-direction: ${({ mobile }) => (mobile ? "column" : "row")};
+  justify-content: ${({ mobile }) => (mobile ? "center" : "flex-end")};
+  align-items: center;
+`
 
-const NavItems = () => {
+const NavItems = ({ mobile, clicked }) => {
   return (
-    <StyledNav>
+    <StyledNav mobile={mobile}>
       {LINKS.map(link => (
-        <NavItem link={link} />
+        <NavItem link={link} clicked={clicked} />
       ))}
     </StyledNav>
   )
