@@ -20,7 +20,7 @@ const StyledButton = styled.a`
   transition: all 0.2s ease-out;
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 15px 20px gray;
+    box-shadow: ${props => props.theme.colors.boxShadow};
   }
   &:active {
     transform: translateY(1px);

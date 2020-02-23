@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
 const StyledRowOne = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `
 const StyledRowTwo = styled.div`
   display: flex;
@@ -34,9 +34,25 @@ const StyledBox = styled.div`
   text-align: center;
   width: 80px;
   height: 80px;
-  &:hover {
-    transform: scale(1.1);
+  &::after{
+    color: white;
+    font-size:1rem;
+    content:'${props => props.text}';
+    display: flex;
+    justify-content: center;
+    margin-top:0.5rem;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    text-transform: capitalize;
+    padding:.5rem 1rem;
+    background-color:red;
+
   }
+  &:hover ::after {
+    transform: scale(1.1);
+
+    }
+
   & svg {
     width: 100%;
     height: 100%;
@@ -47,42 +63,42 @@ const Svg = () => {
   return (
     <StyledDiv>
       <StyledRowOne>
-        <StyledBox>
+        <StyledBox text="webpack">
           <Webpack />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="sass">
           <Sass />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="react">
           <Test />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="gatsby">
           <GatsbySvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="javascript">
           <JsSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="graphql">
           <GraphSvg />
         </StyledBox>
       </StyledRowOne>
       <StyledRowTwo>
-        <StyledBox>
+        <StyledBox text="sketch">
           <SketchSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="redux">
           <ReduxSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="css">
           <CssSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="github">
           <GitSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="html">
           <HtmlSvg />
         </StyledBox>
-        <StyledBox>
+        <StyledBox text="css">
           <Css3Svg />
         </StyledBox>
       </StyledRowTwo>

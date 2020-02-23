@@ -5,23 +5,25 @@ import Img from "gatsby-image"
 import { createElement } from "react"
 const Wrapper = styled.div`
   background: white;
+  text-align: center;
   width: 45%;
   border-radius: 3rem;
   margin-bottom: 6rem;
   position: relative;
+  box-shadow: ${props => props.theme.colors.cardShadow};
 `
 const Image = styled(Img)`
   border-radius: 3rem 3rem 0 0;
 `
 const Stack = styled.div`
-  background: green;
-  position: absolute;
-  right: 3rem;
-  top: 28rem;
+  font-size: 1.5rem;
+  background-color: ${props => props.theme.colors.main};
+  color: ${props => props.theme.colors.heading.white};
+  display: inline-block;
+  padding: 1rem 2rem;
 `
 const Title = styled.h3`
-  text-align: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: ${props => props.theme.colors.main};
   font-weight: 400;
 `
@@ -61,10 +63,10 @@ const PortfolioCard = ({ portfolio }) => {
   return (
     <Wrapper>
       <Image fluid={image.childImageSharp.fluid} />
+      <Title>{title}</Title>
       <Stack className="stacks">
         <span>{stack}</span>
       </Stack>
-      <Title>{title}</Title>
       <Text dangerouslySetInnerHTML={{ __html: portfolio.html }}></Text>
       <ButtonWrapper>
         <ButtonStyle target="_blank" href={source} rel="noreferrer">

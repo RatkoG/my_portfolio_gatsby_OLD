@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
   padding: 1rem 2rem;
   font-size: 1.5rem;
   &:hover {
-    color: green;
+    color: ${props => props.theme.colors.mainLight};
   }
 `
 
