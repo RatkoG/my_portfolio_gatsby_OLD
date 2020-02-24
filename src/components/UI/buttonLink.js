@@ -12,7 +12,7 @@ const StyledButton = styled.a`
   display: flex;
   letter-spacing: 1.5px;
   align-items: center;
-  font-weight: 700;
+  font-weight: 400;
   padding: 8px 40px;
   border-radius: 1.5rem;
   font-size: 1.5rem;
@@ -26,6 +26,13 @@ const StyledButton = styled.a`
     transform: translateY(1px);
     box-shadow: 0 3px 10px gray;
   }
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
+  /* @media ${props => props.theme.mediaQueries.small} {
+    padding: 1.2rem 3rem;
+  } */
 `
 
 const ButtonLink = ({ children, ...rest }) => (

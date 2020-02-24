@@ -27,6 +27,15 @@ const Title = styled.h1`
     color: blue;
     transition: color 0.2s ease-out;
   }
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 6rem;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    font-size: 4.5rem;
+  }
+  @media ${props => props.theme.mediaQueries.smaller} {
+    font-size: 3.5rem;
+  }
 `
 const SubTitle = styled.h2`
   color: white;
@@ -45,6 +54,15 @@ const SubTitle = styled.h2`
     font-style: italic;
     color: blue;
     transition: color 0.2s ease-out;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 1.7rem;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    font-size: 1.6rem;
+  }
+  @media ${props => props.theme.mediaQueries.smaller} {
+    font-size: 1.5rem;
   }
 `
 

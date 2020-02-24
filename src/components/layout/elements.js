@@ -19,6 +19,12 @@ export const Contained = styled.div`
   padding: 0 2rem;
   margin: 0 auto;
   width: 100%;
+  @media ${props => props.theme.mediaQueries.small} {
+    padding: 0 3rem;
+  }
+  @media ${props => props.theme.mediaQueries.smaller} {
+    padding: 0 2rem;
+  }
 `
 export const Wrapper = styled.div`
   padding: 4rem 2rem;
@@ -35,6 +41,13 @@ export const StyledSectionSkew = styled.section`
   width: 100%;
   /* min-height: 100vh; */
   transform: skewY(-7deg);
+  @media ${({ theme }) => theme.mediaQueries.small} {
+    margin-top: 6rem;
+    padding: 4rem 0rem;
+  }
+  @media ${({ theme }) => theme.mediaQueries.smaller} {
+    padding: 3rem 0rem;
+  }
 `
 export const ContainedSkew = styled.div`
   max-width: 124rem;

@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   margin-bottom: 6rem;
   position: relative;
   box-shadow: ${props => props.theme.colors.cardShadow};
+  @media ${props => props.theme.mediaQueries.small} {
+    width: 80%;
+  }
 `
 const Image = styled(Img)`
   border-radius: 3rem 3rem 0 0;

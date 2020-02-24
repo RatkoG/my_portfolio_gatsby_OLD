@@ -24,28 +24,38 @@ const StyledRowOne = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 4rem;
+  @media ${props => props.theme.mediaQueries.small} {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
 `
 const StyledRowTwo = styled.div`
   display: flex;
   justify-content: space-around;
+  @media ${props => props.theme.mediaQueries.small} {
+    flex-wrap: wrap;
+  }
 `
 const StyledBox = styled.div`
   /* background: green; */
   text-align: center;
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
+  @media ${props => props.theme.mediaQueries.small} {
+    flex: 1 0 30%;
+    margin-bottom: 4rem;
+  }
   &::after{
     color: white;
     font-size:1rem;
     content:'${props => props.text}';
-    display: flex;
-    justify-content: center;
+    display:inline-block;
     margin-top:0.5rem;
     transform: scale(0);
     transition: transform 0.3s ease 0s;
     text-transform: capitalize;
     padding:.5rem 1rem;
-    background-color:red;
+    background-color:${props => props.fill || "#000000"};
 
   }
   &:hover ::after {
@@ -63,30 +73,30 @@ const Svg = () => {
   return (
     <StyledDiv>
       <StyledRowOne>
-        <StyledBox text="webpack">
+        <StyledBox text="webpack" fill="#8DD6F9">
           <Webpack />
         </StyledBox>
-        <StyledBox text="sass">
+        <StyledBox text="sass" fill="#CC6699">
           <Sass />
         </StyledBox>
-        <StyledBox text="react">
+        <StyledBox text="react" fill="#61DAFB">
           <Test />
         </StyledBox>
-        <StyledBox text="gatsby">
+        <StyledBox text="gatsby" fill="#663399">
           <GatsbySvg />
         </StyledBox>
-        <StyledBox text="javascript">
+        <StyledBox text="javascript" fill="#F7DF1E">
           <JsSvg />
         </StyledBox>
-        <StyledBox text="graphql">
+        <StyledBox text="graphql" fill="#E10098">
           <GraphSvg />
         </StyledBox>
       </StyledRowOne>
       <StyledRowTwo>
-        <StyledBox text="sketch">
+        <StyledBox text="sketch" fill="#F7B500">
           <SketchSvg />
         </StyledBox>
-        <StyledBox text="redux">
+        <StyledBox text="redux" fill="#764ABC">
           <ReduxSvg />
         </StyledBox>
         <StyledBox text="css">
@@ -95,10 +105,10 @@ const Svg = () => {
         <StyledBox text="github">
           <GitSvg />
         </StyledBox>
-        <StyledBox text="html">
+        <StyledBox text="html" fill="#E34F26">
           <HtmlSvg />
         </StyledBox>
-        <StyledBox text="css">
+        <StyledBox text="css" fill="#1572B6">
           <Css3Svg />
         </StyledBox>
       </StyledRowTwo>

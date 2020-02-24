@@ -13,6 +13,9 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 7rem;
+  @media ${props => props.theme.mediaQueries.small} {
+    margin-bottom: 5rem;
+  }
 `
 const StyledSvg = styled.a`
   border: 0.2rem solid ${props => props.theme.colors.main};
@@ -38,6 +41,10 @@ const StyledSvg = styled.a`
     background: ${props => props.theme.colors.main};
     transform: scale(1.2);
   } */
+  @media ${props => props.theme.mediaQueries.small} {
+    width: 5rem;
+  height: 5rem;
+  }
 `
 
 const Social = () => {
