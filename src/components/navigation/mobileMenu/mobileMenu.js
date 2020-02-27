@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import HamburgerToggler from "./hamburgerToggle"
@@ -32,8 +32,7 @@ const Wrapper = styled.div`
 // if (props.show) {
 //   drawerClasses = 'side-drawer open';
 // }
-const MobileMenu = () => {
-  const [menuOpened, setMenuOpened] = useState(false)
+const MobileMenu = ({ menuOpened, setMenuOpened }) => {
   return (
     <>
       <HamburgerToggler

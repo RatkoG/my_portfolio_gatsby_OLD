@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(null)
-
+  const [menuOpened, setMenuOpened] = useState(false)
   const changeMobile = () => {
     window.matchMedia("(max-width: 37.5em)").matches
       ? setMobile(true)
@@ -51,10 +51,19 @@ const Navbar = () => {
   return (
     <StyledHeader>
       <Wrapper Mobile={Mobile}>
-        <StyledLink to="header" smooth={true} offset={-60}>
+        <StyledLink
+          to="header"
+          smooth={true}
+          offset={-60}
+          onClick={() => setMenuOpened(false)}
+        >
           <LogoNavbar />
         </StyledLink>
-        {Mobile ? <MobileMenu /> : <DesktopMenu />}
+        {Mobile ? (
+          <MobileMenu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+        ) : (
+          <DesktopMenu />
+        )}
       </Wrapper>
     </StyledHeader>
   )
