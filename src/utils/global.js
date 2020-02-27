@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components"
+// import logo from "../images/backgroundPhoto.png"
 import logo from "../images/backgroundPhoto.png"
-
+import logoSketch from "../images/sketch.svg"
 export default createGlobalStyle`
-
 html {
       font-size: 62.5%; //1rem = 10px
       box-sizing: border-box;
@@ -40,7 +40,9 @@ html {
 		width: 100%;
     height: 100%;
 		overflow: visible;
-    background-color:${props => props.theme.colors.main};
-    background-image: url(${logo})
+    background-image: linear-gradient(to right bottom, #2980b9, #008ab9, #0093b7, #009bb2, #25a3ab);
 	}
 `
+
+// console.log(`THERE IS THE LOGO ${logo}`)
+// console.log(`THERE IS THE LOGO ${logoSketch}`)

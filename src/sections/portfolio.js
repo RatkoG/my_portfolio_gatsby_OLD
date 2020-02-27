@@ -57,7 +57,9 @@ const Portfolio = () => {
         <Wrapper>
           <Heading
             title="Portfolio"
+            primary={false}
             subtitle="Sneak peak what I've been doing lately"
+            main={false}
           />
           <PortfolioWrapper>
             {items.edges.map(item => (

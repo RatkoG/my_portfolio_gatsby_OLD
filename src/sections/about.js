@@ -21,6 +21,10 @@ const StyledText = styled.div`
   width: 85%;
   margin: 0 auto;
   text-align: center;
+  @media ${props => props.theme.mediaQueries.smallest} {
+    width: 100%;
+    text-align: left;
+  }
 `
 const StyledStack = styled.h2`
   font-weight: 600;

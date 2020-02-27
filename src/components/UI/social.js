@@ -41,10 +41,14 @@ const StyledSvg = styled.a`
     background: ${props => props.theme.colors.main};
     transform: scale(1.2);
   } */
+  @media ${props => props.theme.mediaQueries.smallest} {
+    margin: 0 0.8rem;
+  }
   @media ${props => props.theme.mediaQueries.small} {
     width: 5rem;
   height: 5rem;
   }
+
 `
 
 const Social = () => {

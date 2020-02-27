@@ -32,6 +32,9 @@ export const Wrapper = styled.div`
   width: 100%;
   align-items: center;
   flex-direction: column;
+  @media ${props => props.theme.mediaQueries.smallest} {
+    padding: 3rem 1rem;
+  }
 `
 export const StyledSectionSkew = styled.section`
   display: flex;

@@ -40,8 +40,8 @@ const Contact = () => {
         <Wrapper>
           <Heading
             title="Contact me"
-            subtitle="Have a question or want to work together ?"
             primary
+            subtitle="Have a question or want to work together ?"
           />
           <ButtonLink href={`mailto:${site.siteMetadata.social.email}`}>
             Send me a message
