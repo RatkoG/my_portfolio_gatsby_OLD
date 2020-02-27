@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import HamburgerToggler from "./hamburgerToggle"
 import NavItems from "../navItems/navItems"
-import SideDrawer from "./sideDrawer"
+// import SideDrawer from "./sideDrawer"
 
 const BackgroundWrapper = styled.div`
   position: fixed;

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 // import logo from "../images/backgroundPhoto.png"
-import logo from "../images/backgroundPhoto.png"
-import logoSketch from "../images/sketch.svg"
+// import logo from "../images/backgroundPhoto.png"
+// import logoSketch from "../images/sketch.svg"
 export default createGlobalStyle`
 html {
       font-size: 62.5%; //1rem = 10px

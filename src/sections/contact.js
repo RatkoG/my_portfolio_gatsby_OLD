@@ -48,7 +48,7 @@ const Contact = () => {
           </ButtonLink>
           <Social />
           <CopyRight>
-            Copyright &copy; {new Date().getFullYear}, Ratko Gjurichanin
+            Copyright &copy; {new Date().getFullYear()}, Ratko Gjurichanin
           </CopyRight>
         </Wrapper>
       </Contained>

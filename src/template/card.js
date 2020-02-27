@@ -1,8 +1,8 @@
-import React, { createContext } from "react"
+import React from "react"
 import styled from "styled-components"
 import ButtonLink from "../components/UI/buttonLink"
 import Img from "gatsby-image"
-import { createElement } from "react"
+// import { createElement } from "react"
 const Wrapper = styled.div`
   background: white;
   text-align: center;
@@ -53,9 +53,8 @@ const PortfolioCard = ({ portfolio }) => {
   // FIXME: THIS THING RENDER ALL STACKS ON ONE CARD
   const stackArr = stack.split(" ")
   function eachStack(stack) {
-    const div = document.querySelector(".stacks")
-    const span = `<span>${stack}</span>`
-
+    // const div = document.querySelector(".stacks")
+    // const span = `<span>${stack}</span>`
     // const myFragment = document.createRange().createContextualFragment(span)
     // div.appendChild(myFragment)
     // console.log(span)
