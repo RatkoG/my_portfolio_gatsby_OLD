@@ -23,7 +23,10 @@ const StyledButton = styled.button`
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
-      background-color: green;
+      //TODO: Change the color if you go full height with the menu
+      background-color: ${props => props.theme.colors.mainLight};
+      /* background-color: ${props => props.theme.colors.white}; */
+
     }
   }
 

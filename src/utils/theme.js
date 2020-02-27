@@ -13,6 +13,9 @@ const theme = {
     shadow: "rgba(0, 0, 0, 0.16) 0 0.5rem 2rem",
     boxShadow: "0 10px 20px rgba(0,0,0,0.1),0 6px 6px rgba(0,0,0,0.1)",
     cardShadow: "0  3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)",
+    white: "#fff",
+    bgGradient:
+      "linear-gradient(to right bottom, #2980b9, #008ab9, #0093b7, #009bb2, #25a3ab)",
     text: "#1c2833",
     // text: "#575757",
     heading: {

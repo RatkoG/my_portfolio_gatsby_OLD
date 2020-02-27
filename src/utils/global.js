@@ -40,7 +40,7 @@ html {
 		width: 100%;
     height: 100%;
 		overflow: visible;
-    background-image: linear-gradient(to right bottom, #2980b9, #008ab9, #0093b7, #009bb2, #25a3ab);
+    background-image: ${props => props.theme.colors.bgGradient}
 	}
 `
 

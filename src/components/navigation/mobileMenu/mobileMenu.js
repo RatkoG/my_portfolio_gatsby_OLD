@@ -11,19 +11,23 @@ const BackgroundWrapper = styled.div`
   z-index: -1;
   top: 0;
   right: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
 `
 const Wrapper = styled.div`
-  background-color: green;
+  background-image: ${props => props.theme.colors.bgGradient};
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 7rem;
   padding: 2rem 1rem;
+  ${({ isMobile }) => (isMobile ? "6rem" : "7rem")};
+  transform: ${({ menuOpened }) =>
+    menuOpened ? "translateX(100%)" : "translateX(0)"};
+  transition: transform 0.3s ease-out;
 `
 // if (props.show) {
 //   drawerClasses = 'side-drawer open';
