@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const LogoNavbar = () => {
+const LogoNavbar = ({ setMenuOpened }) => {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "logo/logoNavbar.png" }) {

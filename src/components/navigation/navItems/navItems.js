@@ -17,7 +17,7 @@ const NavItems = ({ mobile, clicked }) => {
   return (
     <StyledNav mobile={mobile}>
       {LINKS.map(link => (
-        <NavItem link={link} clicked={clicked} />
+        <NavItem link={link} clicked={clicked} mobile={mobile} />
       ))}
     </StyledNav>
   )
