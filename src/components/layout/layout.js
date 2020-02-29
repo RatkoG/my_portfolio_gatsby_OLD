@@ -6,7 +6,7 @@ import styled from "styled-components"
 import GlobalStyles from "../../utils/global"
 import theme from "../../utils/theme"
 
-// import Navbar from "../navigation/navbar"
+import Navbar from "../navigation/navbar"
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,10 +23,10 @@ const StyledMain = styled.main`
   flex: 1;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ noShowOnPage, children }) => (
   <ThemeProvider theme={theme}>
     <Wrapper>
-      {/* <Navbar /> */}
+      <Navbar noShowOnPage={noShowOnPage} />
       <StyledMain>{children}</StyledMain>
       {/* <Footer /> */}
       <GlobalStyles />
