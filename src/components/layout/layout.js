@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import GlobalStyles from "../../utils/global"
 import theme from "../../utils/theme"
-
+import SEO from "../utils/seo"
 import Navbar from "../navigation/navbar"
 
 const Wrapper = styled.div`
@@ -26,9 +26,9 @@ const StyledMain = styled.main`
 const Layout = ({ noShowOnPage, children }) => (
   <ThemeProvider theme={theme}>
     <Wrapper>
+      <SEO />
       <Navbar noShowOnPage={noShowOnPage} />
       <StyledMain>{children}</StyledMain>
-      {/* <Footer /> */}
       <GlobalStyles />
     </Wrapper>
   </ThemeProvider>
