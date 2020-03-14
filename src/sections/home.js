@@ -1,12 +1,39 @@
 import React from "react"
-import styled from "styled-components"
-// import logo from "../images/backgroundPhoto.png"
+import styled, { keyframes } from "styled-components"
+import Pattern from "../images/svg/pattern.svg"
 
 import {
   StyledSection,
   Contained,
   Wrapper,
 } from "../components/layout/elements"
+
+const float = keyframes`
+ 0% {
+      transform: translateY(0);
+    }
+
+    65% {
+       transform: translateY(2.5rem);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+`
+const float1 = keyframes`
+ 0% {
+      transform: translateY(0);
+    }
+
+    65% {
+       transform: translateY(-2.5rem);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+`
 
 const SmallWrapper = styled.div`
   width: 90%;
@@ -66,18 +93,46 @@ const SubTitle = styled.h2`
   }
 `
 
+const StyledDiv = styled.div`
+  position: absolute;
+  height: 50rem;
+  width: 50rem;
+  z-index: -1;
+`
+const StyledDivOne = styled(StyledDiv)`
+  animation: ${float} 3s ease-in-out infinite;
+  right: 1rem;
+  top: 3rem;
+`
+const StyledDivTwo = styled(StyledDiv)`
+  animation: ${float1} 3s ease-in-out infinite;
+  right: 30rem;
+  bottom: 0;
+`
+const StyledPattern = styled(Pattern)`
+  height: 100%;
+  width: 100%;
+`
+const StyledPatternTwo = styled(StyledPattern)`
+  transform: rotateY(180deg);
+`
+
 const Home = () => {
   return (
     <StyledSection fullHeight id="header">
-      {/* <img src={logo} /> */}
+      <StyledDivOne>
+        <StyledPattern />
+      </StyledDivOne>
+      <StyledDivTwo>
+        <StyledPatternTwo />
+      </StyledDivTwo>
       <Contained>
         <Wrapper>
           <SmallWrapper>
             <Title>Hi! I'm Ratko.</Title>
             <SubTitle>
-              A <span>self-taught</span> Front-end developer
-              <br />I create awesome modern websites trough carefully crafted
-              code
+              A Front-end developer
+              <br />I use code to create things that benefit others
             </SubTitle>
           </SmallWrapper>
         </Wrapper>

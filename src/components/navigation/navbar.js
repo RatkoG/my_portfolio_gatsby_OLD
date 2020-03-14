@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react"
 // import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "react-scroll"
+import { Link as GatsbyLink } from "gatsby"
 // import { animated, useSpring, config }
 
 import DesktopMenu from "./desktopMenu"
 import MobileMenu from "./mobileMenu/mobileMenu"
 import LogoNavbar from "../UI/logoNavbar"
+
+const GatsbyStyledLink = styled(GatsbyLink)`
+  cursor: pointer;
+  display: flex;
+`
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -34,7 +40,7 @@ const StyledLink = styled(Link)`
   /* display: flex; */
 `
 
-const Navbar = () => {
+const Navbar = ({ noShowOnPage }) => {
   const [Mobile, setMobile] = useState(null)
   const [menuOpened, setMenuOpened] = useState(false)
   const changeMobile = () => {
@@ -42,6 +48,7 @@ const Navbar = () => {
       ? setMobile(true)
       : setMobile(false)
   }
+
   useEffect(() => {
     changeMobile()
     window.addEventListener("resize", changeMobile)
@@ -51,18 +58,29 @@ const Navbar = () => {
   return (
     <StyledHeader>
       <Wrapper Mobile={Mobile}>
-        <StyledLink
-          to="header"
-          smooth={true}
-          offset={-60}
-          onClick={() => setMenuOpened(false)}
-        >
-          <LogoNavbar />
-        </StyledLink>
-        {Mobile ? (
-          <MobileMenu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+        {noShowOnPage ? (
+          <GatsbyStyledLink to="/">
+            <LogoNavbar />
+          </GatsbyStyledLink>
         ) : (
-          <DesktopMenu />
+          <StyledLink
+            to="header"
+            smooth={true}
+            offset={-60}
+            onClick={() => setMenuOpened(false)}
+          >
+            <LogoNavbar noShowOnPage={noShowOnPage} />
+          </StyledLink>
+        )}
+
+        {Mobile ? (
+          <MobileMenu
+            noShowOnPage={noShowOnPage}
+            menuOpened={menuOpened}
+            setMenuOpened={setMenuOpened}
+          />
+        ) : (
+          <DesktopMenu noShowOnPage={noShowOnPage} />
         )}
       </Wrapper>
     </StyledHeader>

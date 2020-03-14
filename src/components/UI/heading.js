@@ -19,8 +19,6 @@ const Title = styled.h1`
   /* color: ${props => props.theme.colors.main}; */
   /* color: ${props => props.FontColor}; */
   color:${props => (props.primary ? props.theme.colors.main : "white")};
-
-
 `
 const SubTitle = styled.h2`
   font-size: 2rem;
@@ -38,5 +36,3 @@ const Heading = ({ title, subtitle, primary }) => {
   )
 }
 export default Heading
-
-// fontColor
