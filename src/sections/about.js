@@ -51,7 +51,7 @@ const About = () => {
         <Wrapper>
           <Heading
             title="About me"
-            subtitle="A little more about my self"
+            subtitle="A little more about myself"
             primary
           />
           <StyledText>
