@@ -1,4 +1,5 @@
 import React from "react"
+import rehypeReact from "rehype-react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import {
@@ -32,14 +33,17 @@ const StyledStack = styled.h2`
   margin-top: 5rem;
   font-size: 2rem;
 `
-
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  // components: { "my-component": MyComponent }
+}).Compiler
 const About = () => {
   const { aboutMe } = useStaticQuery(graphql`
     {
       aboutMe: file(relativePath: { eq: "aboutMe.md" }) {
         name
         childMarkdownRemark {
-          html
+          htmlAst
         }
       }
     }
@@ -55,7 +59,7 @@ const About = () => {
             primary
           />
           <StyledText>
-            {aboutMe.childMarkdownRemark.html}{" "}
+            {renderAst(aboutMe.childMarkdownRemark.htmlAst)}
             <StyledStack>
               This is my current stack of languages/techonogies
             </StyledStack>
