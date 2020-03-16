@@ -17,14 +17,13 @@ const StyledAbout = styled(StyledSectionSkew)`
 const StyledText = styled.div`
   color: ${props => props.theme.colors.text};
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   width: 85%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   @media ${props => props.theme.mediaQueries.smallest} {
     width: 100%;
-    text-align: left;
   }
 `
 const StyledStack = styled.h2`
@@ -32,10 +31,10 @@ const StyledStack = styled.h2`
   color: ${props => props.theme.colors.text};
   margin-top: 5rem;
   font-size: 2rem;
+  text-align: center;
 `
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  // components: { "my-component": MyComponent }
 }).Compiler
 const About = () => {
   const { aboutMe } = useStaticQuery(graphql`
@@ -60,10 +59,10 @@ const About = () => {
           />
           <StyledText>
             {renderAst(aboutMe.childMarkdownRemark.htmlAst)}
-            <StyledStack>
-              This is my current stack of languages/techonogies
-            </StyledStack>
           </StyledText>
+          <StyledStack>
+            This is my current stack of languages/techonogies
+          </StyledStack>
           <Svg />
         </Wrapper>
       </ContainedSkew>
