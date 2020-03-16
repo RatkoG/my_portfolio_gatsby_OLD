@@ -22,7 +22,7 @@ const StyledText = styled.div`
   width: 85%;
   margin: 0 auto;
   text-align: left;
-  @media ${props => props.theme.mediaQueries.smallest} {
+  @media ${props => props.theme.mediaQueries.smaller} {
     width: 100%;
   }
 `

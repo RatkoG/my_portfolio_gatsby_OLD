@@ -9,6 +9,8 @@ const StyledButton = styled.a`
   font-family: inherit;
   font-weight: 400;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
   padding: 0.7rem 2.5rem;
   border-width: initial;
   border-style: none;
