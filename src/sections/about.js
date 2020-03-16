@@ -1,4 +1,5 @@
 import React from "react"
+import rehypeReact from "rehype-react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import {
@@ -16,14 +17,13 @@ const StyledAbout = styled(StyledSectionSkew)`
 const StyledText = styled.div`
   color: ${props => props.theme.colors.text};
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   width: 85%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   @media ${props => props.theme.mediaQueries.smallest} {
     width: 100%;
-    text-align: left;
   }
 `
 const StyledStack = styled.h2`
@@ -31,15 +31,18 @@ const StyledStack = styled.h2`
   color: ${props => props.theme.colors.text};
   margin-top: 5rem;
   font-size: 2rem;
+  text-align: center;
 `
-
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+}).Compiler
 const About = () => {
   const { aboutMe } = useStaticQuery(graphql`
     {
       aboutMe: file(relativePath: { eq: "aboutMe.md" }) {
         name
         childMarkdownRemark {
-          html
+          htmlAst
         }
       }
     }
@@ -51,15 +54,15 @@ const About = () => {
         <Wrapper>
           <Heading
             title="About me"
-            subtitle="A little more about my self"
+            subtitle="A little more about myself"
             primary
           />
           <StyledText>
-            {aboutMe.childMarkdownRemark.html}{" "}
-            <StyledStack>
-              This is my current stack of languages/techonogies
-            </StyledStack>
+            {renderAst(aboutMe.childMarkdownRemark.htmlAst)}
           </StyledText>
+          <StyledStack>
+            This is my current stack of languages/techonogies
+          </StyledStack>
           <Svg />
         </Wrapper>
       </ContainedSkew>

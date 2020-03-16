@@ -89,25 +89,57 @@ const SubTitle = styled.h2`
     font-size: 1.6rem;
   }
   @media ${props => props.theme.mediaQueries.smaller} {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `
 
 const StyledDiv = styled.div`
   position: absolute;
-  height: 50rem;
-  width: 50rem;
+  height: 90rem;
+  width: 90rem;
   z-index: -1;
+
+  @media ${props => props.theme.mediaQueries.largest} {
+    height: 60rem;
+    width: 60rem;
+  }
+  @media ${props => props.theme.mediaQueries.large} {
+    height: 40rem;
+    width: 40rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    height: 30rem;
+    width: 30rem;
+  }
 `
 const StyledDivOne = styled(StyledDiv)`
   animation: ${float} 3s ease-in-out infinite;
-  right: 1rem;
+  right: 5rem;
   top: 3rem;
+  @media ${props => props.theme.mediaQueries.largest} {
+    right: 1rem;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    top: 2rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    right: 0rem;
+    top: 1rem;
+  }
 `
 const StyledDivTwo = styled(StyledDiv)`
   animation: ${float1} 3s ease-in-out infinite;
-  right: 30rem;
+  right: 80rem;
   bottom: 0;
+  @media ${props => props.theme.mediaQueries.largest} {
+    right: 50rem;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    right: 20rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    right: 5rem;
+  }
 `
 const StyledPattern = styled(Pattern)`
   height: 100%;
