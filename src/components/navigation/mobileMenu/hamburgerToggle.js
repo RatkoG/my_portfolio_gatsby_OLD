@@ -115,10 +115,7 @@ const HamburgerToggler = ({ toggleChange, menuOpened }) => {
   const isActive = "is-active"
   return (
     <StyledButton
-      // className={menuOpened ? "is-active" : null}
       type="button"
-      // className={menuOpened ? "is-active" : ""}
-      // className={menuOpened => (menuOpened ? "is-active" : "")}
       className={menuOpened ? isActive : ""}
       onClick={toggleChange}
     >

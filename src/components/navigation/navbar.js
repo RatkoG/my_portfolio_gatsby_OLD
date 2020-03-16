@@ -37,7 +37,6 @@ const Wrapper = styled.div`
 
 const StyledLink = styled(Link)`
   cursor: pointer;
-  /* display: flex; */
 `
 
 const Navbar = ({ noShowOnPage }) => {
