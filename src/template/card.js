@@ -12,8 +12,7 @@ const Wrapper = styled.div`
   text-align: center;
   border-radius: 3rem;
   box-shadow: ${props => props.theme.colors.cardShadow};
-  /*
-  position: relative;*/
+  position: relative;
 `
 const Image = styled(Img)`
   border-radius: 3rem 3rem 0 0;

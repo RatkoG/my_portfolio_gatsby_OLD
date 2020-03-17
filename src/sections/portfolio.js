@@ -13,6 +13,9 @@ const PortfolioWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5rem;
+  @media ${props => props.theme.mediaQueries.medium} {
+    grid-template-columns: 60rem;
+  }
   @media ${props => props.theme.mediaQueries.small} {
     grid-template-columns: 1fr;
   }
