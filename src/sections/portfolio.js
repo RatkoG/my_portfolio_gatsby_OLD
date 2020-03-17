@@ -10,9 +10,13 @@ import {
 } from "../components/layout/elements"
 
 const PortfolioWrapper = styled.div`
-  display: flex;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 5rem;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
 `
 
 const Portfolio = () => {

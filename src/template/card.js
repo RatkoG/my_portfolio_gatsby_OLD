@@ -8,13 +8,12 @@ import LinkSvg from "../images/svg/link.svg"
 const Wrapper = styled.div`
   background: white;
   text-align: center;
-  width: 45%;
+  /* width: 45%; */
   border-radius: 3rem;
-  margin-bottom: 6rem;
   position: relative;
   box-shadow: ${props => props.theme.colors.cardShadow};
   @media ${props => props.theme.mediaQueries.small} {
-    width: 80%;
+    /* width: 80%; */
   }
 `
 const Image = styled(Img)`
