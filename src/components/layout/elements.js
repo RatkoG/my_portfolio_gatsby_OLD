@@ -42,7 +42,6 @@ export const StyledSectionSkew = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* min-height: 100vh; */
   transform: skewY(-7deg);
   @media ${({ theme }) => theme.mediaQueries.small} {
     margin-top: 6rem;

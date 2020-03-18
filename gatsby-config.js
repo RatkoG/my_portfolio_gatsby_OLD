@@ -9,7 +9,7 @@ module.exports = {
       instagram: "https://www.instagram.com/ratko_gj/",
       linkedin: "https://www.linkedin.com/in/ratko-gjurichanin/",
       github: "https://github.com/RatkoG",
-      codepen: "",
+      codepen: "https://codepen.io/dashboard/",
       email: "ratko.gjurichanin@gmail.com",
     },
     imageShare: `share.jpg`,
