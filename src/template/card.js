@@ -6,8 +6,8 @@ import GitSvg from "../images/svg/github.svg"
 import LinkSvg from "../images/svg/link.svg"
 // import { createElement } from "react"
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-rows: 35rem repeat(4, min-content);
+  display: flex;
+  flex-direction: column;
   background: white;
   text-align: center;
   border-radius: 3rem;
@@ -18,7 +18,7 @@ const Image = styled(Img)`
   border-radius: 3rem 3rem 0 0;
 `
 const Stack = styled.div`
-  margin: auto;
+  align-self: center;
   font-size: 1.5rem;
   background-color: ${props => props.theme.colors.main};
   color: ${props => props.theme.colors.heading.white};
@@ -41,8 +41,11 @@ const Text = styled.p`
 `
 
 const ButtonWrapper = styled.div`
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
+  width: 80%;
+  align-self: center;
 `
 const ButtonStyle = styled(ButtonLink)`
   margin-bottom: 3rem;
