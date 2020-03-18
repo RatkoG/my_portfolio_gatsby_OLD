@@ -15,7 +15,6 @@ import GitSvg from "../../images/svg/github.svg"
 import HtmlSvg from "../../images/svg/html5.svg"
 import Css3Svg from "../../images/svg/css3.svg"
 const StyledDiv = styled.div`
-  /* background: red; */
   width: 100%;
   padding: 2rem;
   margin-bottom: 4rem;
@@ -37,7 +36,6 @@ const StyledRowTwo = styled.div`
   }
 `
 const StyledBox = styled.div`
-  /* background: green; */
   text-align: center;
   width: 8rem;
   height: 8rem;

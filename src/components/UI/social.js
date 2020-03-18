@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-// TODO: IMPORT THEM TOGETHER
 import GitHub from "../../images/svg/github.svg"
 import Instagram from "../../images/svg/instagram.svg"
 import LinkedIn from "../../images/svg/linkedin.svg"
@@ -29,26 +28,21 @@ const StyledSvg = styled.a`
   transition: 0.4s ease-out;
   & svg {
     width: 2.5rem;
-    fill:  ${props => props.theme.colors.main};
+    fill: ${props => props.theme.colors.main};
   }
   &:hover {
     background: ${props => props.theme.colors.main};
-    svg{
-      fill:white;
+    svg {
+      fill: white;
     }
   }
-  /* &:hover svg {
-    background: ${props => props.theme.colors.main};
-    transform: scale(1.2);
-  } */
   @media ${props => props.theme.mediaQueries.smallest} {
     margin: 0 0.8rem;
   }
   @media ${props => props.theme.mediaQueries.small} {
     width: 5rem;
-  height: 5rem;
+    height: 5rem;
   }
-
 `
 
 const Social = () => {
@@ -61,6 +55,7 @@ const Social = () => {
             instagram
             linkedin
             github
+            codepen
           }
         }
       }
@@ -100,7 +95,7 @@ const Social = () => {
       <StyledSvg
         target="_blank"
         aria-label="Codepen"
-        href={site.siteMetadata.social.github}
+        href={site.siteMetadata.social.codepen}
       >
         <Codepen />
       </StyledSvg>
