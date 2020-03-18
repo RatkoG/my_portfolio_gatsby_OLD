@@ -10,9 +10,15 @@ import {
 } from "../components/layout/elements"
 
 const PortfolioWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  @media ${props => props.theme.mediaQueries.medium} {
+    grid-template-columns: 60rem;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Portfolio = () => {
@@ -29,7 +35,6 @@ const Portfolio = () => {
           node {
             name
             childMarkdownRemark {
-              id
               frontmatter {
                 title
                 live
@@ -37,7 +42,6 @@ const Portfolio = () => {
                 stack
                 image {
                   childImageSharp {
-                    id
                     fluid(maxWidth: 800, quality: 80) {
                       ...GatsbyImageSharpFluid_tracedSVG
                     }

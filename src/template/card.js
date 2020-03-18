@@ -2,23 +2,23 @@ import React from "react"
 import styled from "styled-components"
 import ButtonLink from "../components/UI/buttonLink"
 import Img from "gatsby-image"
+import GitSvg from "../images/svg/github.svg"
+import LinkSvg from "../images/svg/link.svg"
 // import { createElement } from "react"
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   background: white;
   text-align: center;
-  width: 45%;
   border-radius: 3rem;
-  margin-bottom: 6rem;
-  position: relative;
   box-shadow: ${props => props.theme.colors.cardShadow};
-  @media ${props => props.theme.mediaQueries.small} {
-    width: 80%;
-  }
+  position: relative;
 `
 const Image = styled(Img)`
   border-radius: 3rem 3rem 0 0;
 `
 const Stack = styled.div`
+  align-self: center;
   font-size: 1.5rem;
   background-color: ${props => props.theme.colors.main};
   color: ${props => props.theme.colors.heading.white};
@@ -41,27 +41,31 @@ const Text = styled.p`
 `
 
 const ButtonWrapper = styled.div`
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
+  width: 80%;
+  align-self: center;
 `
 const ButtonStyle = styled(ButtonLink)`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+`
+
+const StyledGitSvg = styled(GitSvg)`
+  fill: ${props => props.theme.colors.white};
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+`
+const StyledLinkSvg = styled(LinkSvg)`
+  fill: ${props => props.theme.colors.white};
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
 `
 
 const PortfolioCard = ({ portfolio }) => {
   const { title, live, source, stack, image } = portfolio.frontmatter
-  // FIXME: THIS THING RENDER ALL STACKS ON ONE CARD
-  const stackArr = stack.split(" ")
-  function eachStack(stack) {
-    // const div = document.querySelector(".stacks")
-    // const span = `<span>${stack}</span>`
-    // const myFragment = document.createRange().createContextualFragment(span)
-    // div.appendChild(myFragment)
-    // console.log(span)
-  }
-
-  stackArr.forEach(eachStack)
-
   return (
     <Wrapper>
       <Image fluid={image.childImageSharp.fluid} />
@@ -72,10 +76,12 @@ const PortfolioCard = ({ portfolio }) => {
       <Text dangerouslySetInnerHTML={{ __html: portfolio.html }}></Text>
       <ButtonWrapper>
         <ButtonStyle target="_blank" href={source} rel="noreferrer">
-          Code
+          <StyledGitSvg />
+          Source
         </ButtonStyle>
         <ButtonStyle target="_blank" solid href={live} rel="noreferrer">
-          Live
+          <StyledLinkSvg />
+          Visit
         </ButtonStyle>
       </ButtonWrapper>
     </Wrapper>

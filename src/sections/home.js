@@ -114,8 +114,8 @@ const StyledDiv = styled.div`
 `
 const StyledDivOne = styled(StyledDiv)`
   animation: ${float} 3s ease-in-out infinite;
-  right: 5rem;
-  top: 3rem;
+  right: 5%;
+  top: 3%;
   @media ${props => props.theme.mediaQueries.largest} {
     right: 1rem;
   }
