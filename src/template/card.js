@@ -30,7 +30,7 @@ const Title = styled.h3`
   color: ${props => props.theme.colors.main};
   font-weight: 400;
 `
-const Text = styled.p`
+const Text = styled.div`
   text-align: left;
   font-size: 1.4rem;
   color: ${props => props.theme.colors.text};
