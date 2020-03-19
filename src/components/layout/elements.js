@@ -6,13 +6,7 @@ export const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* TODO: Fix this here */
-  min-height: ${({ fullHeight }) =>
-    fullHeight
-      ? "100vh"
-      : "auto"}; /* Fallback for browsers that do not support Custom Properties */
-  min-height: ${({ fullHeight }) =>
-    fullHeight ? "calc(var(--vh, 1vh) * 100)" : "auto"};
+  min-height: ${({ fullHeight }) => (fullHeight ? "100vh" : "auto")};
 `
 export const Contained = styled.div`
   max-width: 124rem;
