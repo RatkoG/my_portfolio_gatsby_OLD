@@ -1,6 +1,5 @@
-# Personal Portfolio Website
+# Personal Portfolio Website - OLD
 
-## [Check it live here](https://ratkogjurichanin.com/)
 
 ![Thumbnail](thumbnail.png)
 
